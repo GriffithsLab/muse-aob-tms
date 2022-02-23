@@ -44,12 +44,15 @@ stop_bluemuse = False # False
 
 # EEG device names for BlueMuse streaming: 'muse2016', 'muse2', 'museS'
 #  "    "     "    for brainflow streaming: 'muse2016_bfn', 'muse2_bfn', 'museS_bfn'
-eeg_device='muse2016'
+#eeg_device='muse2016'
+eeg_device = 'muse2'
 
 # File paths and naming
 initials = 'TMS-AOB' # Could put per-subject initials in here if useful
 run_num = '1' # Can add run labelling here if useful, but would require regular run script editing. 
-outdir = r"C:\Users\eeg_lab\Desktop\muse_aob_tms\recordings"
+#outdir = r"C:\Users\eeg_lab\Desktop\muse_aob_tms\recordings"
+outdir = os.getcwd() + '..\\..\\data\\raw'
+
 
 # Define auditory oddball parameters
 n_trials = 50
