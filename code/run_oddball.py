@@ -45,7 +45,8 @@ stop_bluemuse = False # False
 # EEG device names for BlueMuse streaming: 'muse2016', 'muse2', 'museS'
 #  "    "     "    for brainflow streaming: 'muse2016_bfn', 'muse2_bfn', 'museS_bfn'
 #eeg_device='muse2016'
-eeg_device = 'muse2'
+#eeg_device = 'muse2'
+eeg_device = 'muse2_bfn'
 
 # File paths and naming
 initials = 'TMS-AOB' # Could put per-subject initials in here if useful
@@ -55,7 +56,7 @@ outdir = os.getcwd() + '..\\..\\data\\raw'
 
 
 # Define auditory oddball parameters
-n_trials = 50
+n_trials = 10 #  50
 iti = 2.9 # inter-trial interval (same as ISI for this expt)
 jitter = 0.05 # random variability adder to ITI
 tone1_hz = '1024'
@@ -135,14 +136,20 @@ if __name__ == '__main__':
 
     # Run oddball task
     print('\n\n\nStarting AOB Experiment...\n\n')
+    
+    """
     print('\n\n\n(make sure bluemuse stream started...)\n\n')
     time.sleep(15)
-    run_task()
+    """
 
+    run_task()
+    
     # Fix muselsl file writing bug (first few marker rows ommitted)
+    """
     time.sleep(1)
     print('\n\nRunning muse file fix')
     fix_musemissinglines(fname)
+    """
 
     print('\n\nFinished AOB Experiment :) \n')
 
