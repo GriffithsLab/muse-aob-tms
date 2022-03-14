@@ -102,7 +102,7 @@ import time
 eeg_device = 'muse2_bfn'
 
 # File paths and naming
-pfx = 'mta' # Shorthand for 'Muse TMS AOB'
+pfx = 'mta_comp1' # Shorthand for 'Muse TMS AOB'
 outdir = os.getcwd() + '\Data'
 
 # Define auditory oddball parameters
