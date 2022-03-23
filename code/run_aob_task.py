@@ -113,7 +113,7 @@ tone1_hz = '1024'
 tone2_hz = '1920'
 
 # Generate conditions list
-seed(0) # use this to fix stim order for every subject, if desired
+#seed(0) # use this to fix stim order for every subject, if desired
 itis = iti + rand(n_trials) * jitter # ITIs list
 conditions = binomial(1, 0.2, n_trials) # list of 1s (standard) and 2s (deviants)
 
